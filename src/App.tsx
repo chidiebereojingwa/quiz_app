@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import QuestionCard from './components/QuestionCard';
 
 function App() {
 
@@ -14,10 +15,19 @@ function App() {
   const nextQuestion = () => {
 
   }
-  
+
   return (
     <div className="App">
-      <h1> Hello world</h1>
+      <h1> REACT QUIZ</h1>
+      <button className='start' onClick={startTrivia}>
+        Start 
+      </button>
+      <p className='score'>Score:</p>
+      <p>Loading Questions ...</p>
+      <QuestionCard/>
+      <button className='next' onClick={nextQuestion}>
+        Next Question
+      </button>
     </div>
   );
 }
